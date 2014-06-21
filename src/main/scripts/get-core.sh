@@ -13,5 +13,5 @@ $GIT clone http://github.com/geeksinspace/mc-core $GIS_MC_HOME/lib/core
 echo "=========================="
 
 # Symlink the config file
-ln -s $GIS_MC_HOME/../../../etc/core.conf $GIS_MC_HOME/lib/core/etc/bot.conf
+ln -s ../../../etc/core.conf $GIS_MC_HOME/lib/core/etc/bot.conf
 

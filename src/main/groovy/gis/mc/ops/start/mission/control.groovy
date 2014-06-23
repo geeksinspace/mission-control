@@ -15,7 +15,11 @@ println ""
 
 // Start the services
 LOG.info "Starting mission control services"
-BOT.comm("srv.loader.start", { LOG.info "Started all services"})
+BOT.comm("srv.loader.start", { 
+    LOG.info "Services loaded"
+    
+    BOT.comm("srv.www.start", { LOG.info "Webservices started" })
+})
 
 // Join the bot
 BOT.join()

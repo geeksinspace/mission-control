@@ -14,17 +14,15 @@ class WWWService extends Service {
     def config = Bot.CONFIG.www
     def http
 
-    def resources = [ "/status", "/track", "/capsule" ]
-    
     public WWWService(){
         super("www", true, 9)
 
-        if(!this.config.docPath){
+        if(this.config.docPath){
+            Spark.externalStaticFileLocation(this.config.docPath)
+        }else{
             LOG.error "No www.docPath config for www service"
-            return
         }
 
-        Spark.externalStaticFileLocation(this.config.docPath)
         Spark.setPort(this.config.port)
     }
     

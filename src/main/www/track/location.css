@@ -1,0 +1,18 @@
+/*
+ * location.css - The stylesheet for the location-uploading webapp.
+ *
+ * Gareth Allan.
+ */
+
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px }
+
+.statusNotSending
+{
+  color: red;
+}
+
+.statusSending
+{
+  color: green;
+}

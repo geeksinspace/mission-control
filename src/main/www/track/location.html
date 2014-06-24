@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  location.html - A web-based location uploader.  To send data to be used with tracker.html
+
+  Gareth Allan.
+-->
+<html>
+  <head>
+    <title>UpdatePosition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="location.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js"
+     type="text/javascript">
+    </script>
+    <script type="text/javascript" src="config.js">
+    </script>
+    <script type="text/javascript" src="util.js">
+    </script>
+    <script type="text/javascript" src="location.js">
+    </script>
+    <script type="text/javascript">
+      dojo.ready(function() {
+        initialize();
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Location Sender</h1>
+
+    <div>
+      Your location is:
+      <div id="loc_div"></div>
+    </div>
+
+    <div>
+    Your name: <input type="text" id="userNameBox" maxlength="255" />
+    <input type="button" id="sendButton" value="Send Location" onclick="sendMyLocation()"/>
+    </div>
+
+    <div id="statusDiv" class="statusNotSending">Not Sending</div>
+  </body>
+</html>

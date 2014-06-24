@@ -1,0 +1,71 @@
+/*
+ * tracker.css - The stylesheet for the tracker webapp.
+ *
+ * Gareth Allan.
+ */
+
+/* The container for the tracking controls. */
+.trackContainer
+{
+  padding: 5px;
+}
+
+/* The actual track me/track balloon buttons */
+.trackButton
+{
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 160%;
+  box-shadow: rgba(0, 0, 0, 0.347656) 2px 2px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.347656) 2px 2px 3px;
+  border: 1px solid rgb(169, 187, 223);
+  color: black;
+  background-color: white;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#F3F3F3));
+  background: -moz-linear-gradient(center top , rgb(254, 254, 254), rgb(243, 243, 243)) repeat scroll 0% 0% transparent;
+  background-position: initial initial;
+  background-repeat: initial initial;
+  padding-top: 0px;
+  padding-right: 6px;
+  padding-bottom: 0px;
+  padding-left: 6px;
+  cursor: pointer;
+}
+
+/* Properties specific to the right-hand tracker button */
+.trackButtonRight
+{
+  border-top-left-radius: 0px 0px;
+  border-top-right-radius: 2px 2px;
+  border-bottom-right-radius: 2px 2px;
+  border-bottom-left-radius: 0px 0px;
+}
+
+/* Properties specific to the left-hand tracker button */
+.trackButtonLeft
+{
+  border-top-left-radius: 2px 2px;
+  border-top-right-radius: 0px 0px;
+  border-bottom-right-radius: 0px 0px;
+  border-bottom-left-radius: 2px 2px;
+}
+
+/* Properties specific to the hightlighted tracker button */
+.trackButtonHighlighted
+{
+  background-color: rgb(116, 145, 211);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6D8ACC), to(#7B98D9));
+  background: -moz-linear-gradient(center top , rgb(109, 138, 204), rgb(123, 152, 217)) repeat scroll 0% 0% transparent;
+  border: 1px solid rgb(103, 138, 199);
+  color: white;
+  font-weight: bold;
+}
+
+/* The username input button */
+.userNameBox
+{
+  margin: 5px;
+}

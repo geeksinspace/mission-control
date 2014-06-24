@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  backuptracker.html - A backup location tracker.
+
+  Gareth Allan.
+-->
+<html>
+  <head>
+    <title>Backup Tracker</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js"
+     type="text/javascript">
+    </script>
+    <script type="text/javascript" src="config.js">
+    </script>
+    <script type="text/javascript" src="util.js">
+    </script>
+    <script type="text/javascript" src="backuptracker.js">
+    </script>
+    <script type="text/javascript">
+      dojo.ready(function() {
+        pollTrackedPosition();
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Balloon Location</h1>
+
+    <div id="locationDiv">
+      <div id="latDiv">
+        Latitude: <span id="latSpan" />
+      </div>
+      <div id="longDiv">
+        Longitude: <span id="longSpan" />
+      </div>
+      <div id="accDiv">
+        Accuracy: <span id="accSpan" />
+      </div>
+      <div id="altDiv">
+        Altitude: <span id="altSpan" />
+      </div>
+      <div id="altAccDiv">
+        Altitude Accuracy: <span id="altAccSpan" />
+      </div>
+      <div id="hdgDiv">
+        Heading: <span id="hdgSpan" />
+      </div>
+      <div id="spdDiv">
+        Speed: <span id="spdSpan" />
+      </div>
+    </div>
+
+    <div id="errorDiv">
+    </div>
+
+    <div id="gmapsLinkDiv">
+      <a id="gmapsLink" title="View on Google Maps" target="_blank">View on Google Maps</a>.
+    <div>
+  </body>
+</html>

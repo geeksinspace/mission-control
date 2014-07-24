@@ -7,23 +7,12 @@ import bot.control.Service
 import spark.Spark
 
 /**
- * The mission control www service
+ * The mission control web service
  */
-class WWWService extends Service {
+class WebService extends Service {
     
-    def config = Bot.CONFIG.www
-    def http
-
-    public WWWService(){
-        super("www", true, 9)
-
-        if(this.config.docPath){
-            Spark.externalStaticFileLocation(this.config.docPath)
-        }else{
-            LOG.error "No www.docPath config for www service"
-        }
-
-        Spark.setPort(this.config.port)
+    public WebService(){
+        super("web", true, 9)
     }
     
     @Override
@@ -36,8 +25,8 @@ class WWWService extends Service {
             // The capsule webservice interface
             return "CAPSULE WEBSERVICE NOT IMPLEMENTED YET"
         })
-        Spark.get("/hello", { req, resp ->
-            return "Hello World!"
+        Spark.get("/ping", { req, resp ->
+            return "pong"
         })
     }
     

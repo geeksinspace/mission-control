@@ -22,7 +22,7 @@ def timer = new TimeTool()
 def http = new AsyncHTTPBuilder(poolSize: 4, uri: url, timeout: 1000)
 def nextFloat = { c, r -> return c+(r-(rng.nextFloat()*(r*2))) } 
 def normalise = { n, hi, low -> return (n>hi) ? hi : (n<low) ? low : n }
-def move = 0.001
+def move = 1
 
 BOT.on("gis.sim.post", { comm ->
     // Update values, movement in range, always going up
@@ -34,7 +34,8 @@ BOT.on("gis.sim.post", { comm ->
 
     LOG.info "Updating position to ${pos}"
     http.request(POST, JSON){
-        body = [ "long": pos[0], "lat": pos[1], "alt": pos[2] ]
+        body = [ "long": pos[0], "lat": pos[1], "alt": pos[2], 
+            "ts": System.currentTimeMillis() ]
     
         response.success = { resp, json ->
             LOG.info "Done: $json"

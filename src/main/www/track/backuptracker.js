@@ -56,7 +56,7 @@ function displayTrackedPosition(result)
   // Now, get the latest position and display it.
   if (indices.length > 0)
   {
-    var position = dojo.fromJson(result[indices[indices.length - 1]]);
+    var position = result[indices[indices.length-1]]
     if (position != undefined)
     {
       // Write the position details to the page.

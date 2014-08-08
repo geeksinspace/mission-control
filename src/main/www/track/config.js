@@ -29,10 +29,10 @@ var trackedURL = "/capsule";
 
 /** The querystring to append to the tracked object's position, in order to
     get the last position entry */
-var lastEntryQs = "?last1";
+var lastEntryQs = "/current";
 
 /** The polling interval for tracked object position (in seconds) */
-var trackedPollInterval = 30;
+var trackedPollInterval = 5;
 
 
 /***** Trackers config. *****/

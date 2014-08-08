@@ -322,7 +322,7 @@ function updateTrackedPosition(result)
   var lineCoords = new Array();
   for (var i in indices)
   {
-    var posObj = dojo.fromJson(result[indices[i]]);
+    var posObj = result[indices[i]];
     if (posObj.lat != undefined && posObj.long != undefined) {
       var pos = new google.maps.LatLng(posObj.lat, posObj.long);
       lineCoords.push(pos);
@@ -373,7 +373,7 @@ function updateTrackersPositions(result)
     if (tracker.toLowerCase() == myName.toLowerCase()) continue;
 
     // Convert the JSON string to an object.
-    var tObj = dojo.fromJson(result[tracker]);
+    var tObj = result[tracker];
 
     // Create a lat-long object.
     var tLoc = new google.maps.LatLng(tObj.lat, tObj.long); 

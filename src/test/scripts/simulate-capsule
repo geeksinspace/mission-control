@@ -1,0 +1,17 @@
+#!/bin/bash
+# Run a capsule simulation
+
+# Check we're groovy enough
+GROOVY="$(which groovy)"
+[ -z "$GROOVY" ] && GROOVY="$GROOVY_HOME/bin/groovy"
+[ ! -x "$GROOVY" ] && echo "Cannot find groovy" && exit 1
+
+# Set the path
+export GIS_MC_HOME=$(dirname $0)/../../..
+
+# Get the core if we need it
+[ ! -d lib/core ] && src/main/scripts/get-core.sh
+
+# Start mission control
+export BOT_HOME=$GIS_MC_HOME/lib/core 
+$BOT_HOME/bot run capsule sim $@ 
